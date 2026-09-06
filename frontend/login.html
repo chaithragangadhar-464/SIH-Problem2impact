@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic webpage information -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Login | Problem2Impact</title>
+
+    <!-- Main website CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Authentication CSS -->
+    <link rel="stylesheet" href="css/auth.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            <span class="logo-mark">
+                P2I
+            </span>
+
+            <span class="logo-text">
+                Problem2Impact
+            </span>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="problems.html">
+                Problems
+            </a>
+
+            <a href="teams.html">
+                Teams
+            </a>
+
+            <a href="#">
+                About
+            </a>
+
+        </nav>
+
+
+        <!-- Register button -->
+
+        <div class="nav-actions">
+
+            <span class="account-question">
+                New to Problem2Impact?
+            </span>
+
+            <a href="register.html" class="register-btn">
+                Register
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= LOGIN SECTION ================= -->
+
+    <main class="auth-page">
+
+
+        <!-- Login introduction -->
+
+        <div class="auth-heading">
+
+            <span class="auth-label">
+                WELCOME BACK
+            </span>
+
+            <h1>
+                Sign in to Problem2Impact
+            </h1>
+
+            <p>
+                Continue discovering problems, collaborating
+                with others and building meaningful solutions.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= LOGIN CARD ================= -->
+
+        <section class="auth-card login-card">
+
+
+            <form id="loginForm">
+
+
+                <!-- ================= EMAIL ================= -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- ================= PASSWORD ================= -->
+
+                <div class="form-group">
+
+                    <div class="password-label">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <a href="#">
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- ================= REMEMBER ME ================= -->
+
+                <div class="remember-me">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                            name="remember"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- ================= LOGIN BUTTON ================= -->
+
+                <button
+                    type="submit"
+                    class="primary-btn auth-submit"
+                >
+                    Login →
+                </button>
+
+
+
+                <!-- ================= REGISTER LINK ================= -->
+
+                <p class="auth-switch">
+
+                    Don't have an account?
+
+                    <a href="register.html">
+                        Create an account
+                    </a>
+
+                </p>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+
+                <span class="logo-mark">
+                    P2I
+                </span>
+
+                <span class="logo-text">
+                    Problem2Impact
+                </span>
+
+            </div>
+
+            <p>
+                Connecting problems with people
+                who can solve them.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+
+            <!-- Platform -->
+
+            <div>
+
+                <h4>
+                    Platform
+                </h4>
+
+                <a href="problems.html">
+                    Problems
+                </a>
+
+                <a href="teams.html">
+                    Teams
+                </a>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+            </div>
+
+
+            <!-- Account -->
+
+            <div>
+
+                <h4>
+                    Account
+                </h4>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+
+            <!-- Community -->
+
+            <div>
+
+                <h4>
+                    Community
+                </h4>
+
+                <a href="#">
+                    Universities
+                </a>
+
+                <a href="#">
+                    Organizations
+                </a>
+
+                <a href="#">
+                    Mentors
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= FOOTER BOTTOM ================= -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Problem2Impact. All rights reserved.
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

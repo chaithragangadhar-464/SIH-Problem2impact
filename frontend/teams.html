@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Teammates | Problem2Impact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* ================================
+           TEAMS PAGE
+        ================================= */
+
+        .teams-container {
+            max-width: 1150px;
+            margin: 45px auto;
+            padding: 0 25px;
+        }
+
+        .page-header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            margin-bottom: 25px;
+        }
+
+        .page-header h1 {
+            margin: 0 0 10px;
+            color: #1e293b;
+            font-size: 30px;
+        }
+
+        .page-header p {
+            margin: 0;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+
+        /* ================================
+           SEARCH
+        ================================= */
+
+        .search-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            margin-bottom: 25px;
+        }
+
+        .search-section label {
+            display: block;
+            margin-bottom: 8px;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #2563eb;
+        }
+
+        .search-btn {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* ================================
+           TEAM GRID
+        ================================= */
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .team-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .member-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #e8f0ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .team-card h2 {
+            margin: 0 0 5px;
+            color: #1e293b;
+            font-size: 19px;
+        }
+
+        .role {
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-card p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+
+        /* ================================
+           SKILLS
+        ================================= */
+
+        .skills {
+            margin: 15px 0;
+        }
+
+        .skill {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #334155;
+            padding: 6px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin: 3px;
+        }
+
+
+        /* ================================
+           BUTTON
+        ================================= */
+
+        .connect-btn {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #2563eb;
+            border-radius: 8px;
+            background: white;
+            color: #2563eb;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .connect-btn:hover {
+            background: #eff6ff;
+        }
+
+
+        /* ================================
+           EMPTY STATE
+        ================================= */
+
+        .empty-state {
+            background: white;
+            padding: 45px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .empty-state-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .empty-state h2 {
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .empty-state p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+
+        /* ================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 900px) {
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         NAVIGATION
+    ================================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Problem2Impact
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="problems.html">
+                    Problems
+                </a>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="teams.html">
+                    Teams
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+
+    <main class="teams-container">
+
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <h1>
+                Find Teammates 🤝
+            </h1>
+
+            <p>
+                Connect with students, developers, designers, researchers
+                and innovators who have the skills needed to turn real-world
+                problems into practical solutions.
+            </p>
+
+        </section>
+
+
+        <!-- ================================
+             SEARCH
+        ================================= -->
+
+        <section class="search-section">
+
+            <label for="skill-search">
+                Search by skill or interest
+            </label>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="skill-search"
+                    placeholder="Example: Python, AI/ML, Web Development, IoT..."
+                >
+
+                <button
+                    type="button"
+                    class="search-btn"
+                >
+                    Search
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             TEAM MEMBERS
+        ================================= -->
+
+        <section class="team-grid">
+
+
+            <!-- Member 1 -->
+
+            <article class="team-card">
+
+                <div class="member-icon">
+                    👨‍💻
+                </div>
+
+                <h2>
+                    AI & ML Enthusiast
+                </h2>
+
+                <div class="role">
+                    AI / Machine Learning
+                </div>
+
+                <p>
+                    Interested in building intelligent solutions for
+                    real-world problems using machine learning and data.
+                </p>
+
+                <div class="skills">
+
+                    <span class="skill">
+                        Python
+                    </span>
+
+                    <span class="skill">
+                        Machine Learning
+                    </span>
+
+                    <span class="skill">
+                        Data Analysis
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="connect-btn"
+                >
+                    Connect
+                </button>
+
+            </article>
+
+
+            <!-- Member 2 -->
+
+            <article class="team-card">
+
+                <div class="member-icon">
+                    👩‍💻
+                </div>
+
+                <h2>
+                    Web Developer
+                </h2>
+
+                <div class="role">
+                    Full Stack Development
+                </div>
+
+                <p>
+                    Interested in creating user-friendly web applications
+                    and digital platforms that solve community problems.
+                </p>
+
+                <div class="skills">
+
+                    <span class="skill">
+                        HTML
+                    </span>
+
+                    <span class="skill">
+                        CSS
+                    </span>
+
+                    <span class="skill">
+                        JavaScript
+                    </span>
+
+                    <span class="skill">
+                        Node.js
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="connect-btn"
+                >
+                    Connect
+                </button>
+
+            </article>
+
+
+            <!-- Member 3 -->
+
+            <article class="team-card">
+
+                <div class="member-icon">
+                    🎨
+                </div>
+
+                <h2>
+                    UI/UX Designer
+                </h2>
+
+                <div class="role">
+                    Design & User Experience
+                </div>
+
+                <p>
+                    Interested in designing simple and accessible interfaces
+                    for applications that address real-world needs.
+                </p>
+
+                <div class="skills">
+
+                    <span class="skill">
+                        UI Design
+                    </span>
+
+                    <span class="skill">
+                        UX Research
+                    </span>
+
+                    <span class="skill">
+                        Figma
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="connect-btn"
+                >
+                    Connect
+                </button>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- ================================
+             INFORMATION
+        ================================= -->
+
+        <section class="empty-state" style="margin-top:25px;">
+
+            <div class="empty-state-icon">
+                💡
+            </div>
+
+            <h2>
+                Build the right team
+            </h2>
+
+            <p>
+                Add your skills and interests to your profile.
+                Problem2Impact can later use this information to
+                recommend relevant teammates and problems.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Problem2Impact. All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

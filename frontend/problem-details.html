@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Problem Details | Problem2Impact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ================================
+           PROBLEM DETAILS PAGE
+        ================================= */
+
+        .details-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .problem-header {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+        }
+
+        .problem-id {
+            display: inline-block;
+            background: #e8f0ff;
+            color: #2563eb;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .problem-title {
+            font-size: 30px;
+            line-height: 1.4;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .problem-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .info-tag {
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: #f1f5f9;
+            color: #334155;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        .details-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .details-card h2 {
+            color: #1e293b;
+            font-size: 21px;
+            margin-bottom: 18px;
+        }
+
+        .details-card p {
+            color: #475569;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .organisation {
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills-list li {
+            background: #f8fafc;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            color: #334155;
+            border-left: 4px solid #2563eb;
+        }
+
+        .action-section {
+            margin-top: 25px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .action-section h2 {
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .action-section p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .primary-btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        .primary-btn:hover {
+            background: #1d4ed8;
+        }
+
+        @media (max-width: 800px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .problem-title {
+                font-size: 24px;
+            }
+
+            .problem-header,
+            .details-card,
+            .action-section {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                Problem2Impact
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="problems.html">Problems</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="details-container">
+
+        <!-- Back Button -->
+        <a href="problems.html" class="back-link">
+            ← Back to Problems
+        </a>
+
+
+        <!-- Problem Header -->
+        <section class="problem-header">
+
+            <span class="problem-id">
+                SIH26043
+            </span>
+
+            <h1 class="problem-title">
+                A digital platform to crowdsource societal challenges and
+                facilitate collaborative problem solving through universities
+                and industry partnerships
+            </h1>
+
+            <div class="problem-info">
+
+                <span class="info-tag">
+                    Organisation: Government of Jharkhand
+                </span>
+
+                <span class="info-tag">
+                    Type: Software
+                </span>
+
+                <span class="info-tag">
+                    Category: Smart Education
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Details -->
+        <section class="details-grid">
+
+            <!-- Problem Description -->
+            <div class="details-card">
+
+                <h2>
+                    Problem Statement
+                </h2>
+
+                <p>
+                    A digital platform to crowdsource societal challenges
+                    and facilitate collaborative problem solving through
+                    universities and industry partnerships.
+                </p>
+
+                <h2 style="margin-top: 30px;">
+                    Organisation
+                </h2>
+
+                <p class="organisation">
+                    Government of Jharkhand
+                </p>
+
+                <h2 style="margin-top: 30px;">
+                    Category
+                </h2>
+
+                <p>
+                    Smart Education
+                </p>
+
+            </div>
+
+
+            <!-- Required Skills -->
+            <div class="details-card">
+
+                <h2>
+                    Relevant Skills
+                </h2>
+
+                <ul class="skills-list">
+
+                    <li>
+                        HTML & CSS
+                    </li>
+
+                    <li>
+                        JavaScript
+                    </li>
+
+                    <li>
+                        Node.js & Express
+                    </li>
+
+                    <li>
+                        MongoDB
+                    </li>
+
+                    <li>
+                        REST APIs
+                    </li>
+
+                    <li>
+                        AI / Machine Learning
+                    </li>
+
+                    <li>
+                        Git & GitHub
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- Action Section -->
+        <section class="action-section">
+
+            <h2>
+                Interested in solving this problem?
+            </h2>
+
+            <p>
+                Find teammates with relevant skills and start building
+                a solution together.
+            </p>
+
+            <a href="teams.html" class="primary-btn">
+                Find Teammates
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Problem2Impact. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

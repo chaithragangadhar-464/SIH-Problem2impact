@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post a Problem | Problem2Impact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* ================================
+           POST PROBLEM PAGE
+        ================================= */
+
+        .post-container {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .form-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-card h1 {
+            font-size: 30px;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .form-description {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        .required {
+            color: #dc2626;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #2563eb;
+        }
+
+        .form-group input:invalid:not(:placeholder-shown),
+        .form-group textarea:invalid:not(:placeholder-shown) {
+            border-color: #dc2626;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .helper-text {
+            display: block;
+            margin-top: 6px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .validation-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .validation-box h3 {
+            margin-top: 0;
+            color: #1e293b;
+            font-size: 17px;
+        }
+
+        .validation-box p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .checkbox-group input {
+            margin-top: 4px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .checkbox-group label {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .note {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eff6ff;
+            border-radius: 8px;
+            color: #475569;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-card {
+                padding: 25px;
+            }
+
+            .form-card h1 {
+                font-size: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ================================
+         NAVIGATION
+    ================================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Problem2Impact
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="problems.html">Problems</a>
+
+                <a href="dashboard.html">Dashboard</a>
+
+                <a href="profile.html">Profile</a>
+
+                <a href="login.html">Login</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+
+    <main class="post-container">
+
+        <a href="problems.html" class="back-link">
+            ← Back to Problems
+        </a>
+
+
+        <section class="form-card">
+
+            <h1>
+                Report a Problem
+            </h1>
+
+            <p class="form-description">
+                Anyone can report a real-world or societal problem.
+                Share the issue, its location and relevant details so
+                that students, innovators and teams can work towards
+                meaningful solutions.
+            </p>
+
+
+            <!-- ================================
+                 PROBLEM FORM
+            ================================= -->
+
+            <form>
+
+
+                <!-- Problem Title -->
+
+                <div class="form-group">
+
+                    <label for="problem-title">
+                        Problem Title <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="problem-title"
+                        name="problem-title"
+                        placeholder="Enter a clear title for the problem"
+                        minlength="10"
+                        maxlength="150"
+                        required
+                    >
+
+                    <span class="helper-text">
+                        Give a short and clear title that describes the issue.
+                    </span>
+
+                </div>
+
+
+                <!-- Problem Description -->
+
+                <div class="form-group">
+
+                    <label for="problem-description">
+                        Describe the Problem <span class="required">*</span>
+                    </label>
+
+                    <textarea
+                        id="problem-description"
+                        name="problem-description"
+                        placeholder="Explain what the problem is, who is affected, how it occurs and why it needs to be solved..."
+                        minlength="50"
+                        maxlength="2000"
+                        required
+                    ></textarea>
+
+                    <span class="helper-text">
+                        Please provide enough information to understand the
+                        problem clearly.
+                    </span>
+
+                </div>
+
+
+                <!-- Place -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="place">
+                            Place / Area <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="place"
+                            name="place"
+                            placeholder="Example: Mysuru"
+                            minlength="2"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- State -->
+
+                    <div class="form-group">
+
+                        <label for="state">
+                            State <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="state"
+                            name="state"
+                            placeholder="Example: Karnataka"
+                            minlength="2"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Address -->
+
+                <div class="form-group">
+
+                    <label for="address">
+                        Address / Location Details <span class="required">*</span>
+                    </label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        placeholder="Enter the specific address or location where the problem exists..."
+                        minlength="10"
+                        maxlength="500"
+                        required
+                    ></textarea>
+
+                    <span class="helper-text">
+                        Provide enough location details so that the problem
+                        can be understood or verified.
+                    </span>
+
+                </div>
+
+
+                <!-- Category + Type -->
+
+                <div class="form-row">
+
+
+                    <!-- Category -->
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            Category <span class="required">*</span>
+                        </label>
+
+                        <select
+                            id="category"
+                            name="category"
+                            required
+                        >
+
+                            <option value="">
+                                Select a category
+                            </option>
+
+                            <option value="smart-education">
+                                Smart Education
+                            </option>
+
+                            <option value="healthcare">
+                                MedTech / HealthTech
+                            </option>
+
+                            <option value="agriculture">
+                                Agriculture & Rural Development
+                            </option>
+
+                            <option value="transportation">
+                                Transportation & Logistics
+                            </option>
+
+                            <option value="smart-automation">
+                                Smart Automation
+                            </option>
+
+                            <option value="clean-green">
+                                Clean & Green Technology
+                            </option>
+
+                            <option value="smart-vehicles">
+                                Smart Vehicles
+                            </option>
+
+                            <option value="cybersecurity">
+                                Blockchain & Cybersecurity
+                            </option>
+
+                            <option value="miscellaneous">
+                                Miscellaneous
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Problem Type -->
+
+                    <div class="form-group">
+
+                        <label for="problem-type">
+                            Problem Type <span class="required">*</span>
+                        </label>
+
+                        <select
+                            id="problem-type"
+                            name="problem-type"
+                            required
+                        >
+
+                            <option value="">
+                                Select type
+                            </option>
+
+                            <option value="software">
+                                Software
+                            </option>
+
+                            <option value="hardware">
+                                Hardware
+                            </option>
+
+                            <option value="both">
+                                Software + Hardware
+                            </option>
+
+                            <option value="not-sure">
+                                Not Sure
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Optional Skills -->
+
+                <div class="form-group">
+
+                    <label for="skills">
+                        Suggested Skills
+                    </label>
+
+                    <input
+                        type="text"
+                        id="skills"
+                        name="skills"
+                        placeholder="Example: AI/ML, Web Development, IoT"
+                    >
+
+                    <span class="helper-text">
+                        Optional. If you know what kind of skills could help
+                        solve the problem, you can mention them.
+                    </span>
+
+                </div>
+
+
+                <!-- Additional Evidence -->
+
+                <div class="form-group">
+
+                    <label for="evidence">
+                        Additional Information / Evidence
+                    </label>
+
+                    <textarea
+                        id="evidence"
+                        name="evidence"
+                        placeholder="Mention observations, frequency of the problem, people affected, or any other useful information..."
+                        maxlength="1500"
+                    ></textarea>
+
+                    <span class="helper-text">
+                        Optional, but additional information can help teams
+                        understand and validate the problem.
+                    </span>
+
+                </div>
+
+
+                <!-- ================================
+                     VALIDATION
+                ================================= -->
+
+                <div class="validation-box">
+
+                    <h3>
+                        Problem Validation
+                    </h3>
+
+                    <p>
+                        Before submitting, make sure the problem is genuine,
+                        the information provided is accurate to the best of
+                        your knowledge, and the location details are correct.
+                    </p>
+
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="confirmation"
+                            name="confirmation"
+                            required
+                        >
+
+                        <label for="confirmation">
+                            I confirm that this is a genuine problem and that
+                            the information I have provided is accurate to the
+                            best of my knowledge.
+                            <span class="required">*</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Submit Problem
+                </button>
+
+
+                <div class="note">
+
+                    <strong>What happens next?</strong><br>
+
+                    Your problem can be reviewed and validated before being
+                    made available to students, innovators and teams on
+                    Problem2Impact.
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Problem2Impact. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
