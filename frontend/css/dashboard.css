@@ -1,0 +1,915 @@
+/* =========================================================
+   PROBLEM2IMPACT
+   DASHBOARD + TEAMS + PROFILE
+   ========================================================= */
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.dashboard-container {
+    max-width: 1150px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+
+/* Welcome Section */
+
+.welcome-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    margin-bottom: 25px;
+}
+
+.welcome-section h1 {
+    margin: 0 0 10px;
+    color: #1e293b;
+    font-size: 30px;
+}
+
+.welcome-section p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.action-card {
+    display: block;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    text-decoration: none;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.action-card:hover {
+    transform: translateY(-3px);
+    border-color: #2563eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+}
+
+.action-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.action-card h3 {
+    margin: 0 0 8px;
+    color: #1e293b;
+    font-size: 18px;
+}
+
+.action-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DASHBOARD GRID
+   ========================================================= */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+
+/* Dashboard Cards */
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    margin-bottom: 25px;
+}
+
+.dashboard-card h2 {
+    margin: 0 0 8px;
+    color: #1e293b;
+    font-size: 20px;
+}
+
+.card-description {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   PROBLEM ITEMS
+   ========================================================= */
+
+.problem-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.problem-item h3 {
+    margin: 0 0 8px;
+    color: #1e293b;
+    font-size: 17px;
+}
+
+.problem-item p {
+    margin: 0 0 12px;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Problem Tags */
+
+.problem-tag {
+    display: inline-block;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+
+
+/* View Problem Link */
+
+.view-link {
+    display: inline-block;
+
+    margin-top: 8px;
+
+    color: #2563eb;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.view-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-state {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.empty-state-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.empty-state h2,
+.empty-state h3 {
+    color: #1e293b;
+    margin: 0 0 8px;
+}
+
+.empty-state p {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.primary-btn {
+    display: inline-block;
+
+    padding: 11px 18px;
+
+    background: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   PROFILE CARD IN DASHBOARD
+   ========================================================= */
+
+.profile-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.profile-card h2 {
+    color: #1e293b;
+    margin: 0 0 5px;
+}
+
+.profile-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.secondary-btn {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border: 1px solid #2563eb;
+
+    color: #2563eb;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: background 0.2s ease;
+}
+
+.secondary-btn:hover {
+    background: #eff6ff;
+}
+
+
+/* =========================================================
+   TEAMS PAGE
+   ========================================================= */
+
+.teams-container {
+    max-width: 1150px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+
+/* Page Header */
+
+.page-header {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin: 0 0 10px;
+
+    color: #1e293b;
+
+    font-size: 30px;
+}
+
+.page-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TEAM SEARCH
+   ========================================================= */
+
+.search-section {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    margin-bottom: 25px;
+}
+
+.search-section label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-weight: 600;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.search-btn {
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   TEAM GRID
+   ========================================================= */
+
+.team-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.team-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+}
+
+
+/* Member Icon */
+
+.member-icon {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: #e8f0ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Team Card Text */
+
+.team-card h2 {
+    margin: 0 0 5px;
+
+    color: #1e293b;
+
+    font-size: 19px;
+}
+
+.role {
+    color: #2563eb;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.team-card p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TEAM SKILLS
+   ========================================================= */
+
+.skills {
+    margin: 15px 0;
+}
+
+.skill {
+    display: inline-block;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    padding: 6px 10px;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+
+    margin: 3px;
+}
+
+
+/* =========================================================
+   CONNECT BUTTON
+   ========================================================= */
+
+.connect-btn {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #2563eb;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+    transition: background 0.2s ease,
+                color 0.2s ease;
+}
+
+.connect-btn:hover {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* =========================================================
+   PROFILE PAGE
+   ========================================================= */
+
+.profile-container {
+    max-width: 900px;
+
+    margin: 45px auto;
+
+    padding: 0 25px;
+}
+
+
+/* Profile Header */
+
+.profile-header {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #e8f0ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+.profile-header h1 {
+    margin: 0 0 8px;
+
+    color: #1e293b;
+}
+
+.profile-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PROFILE FORM CARDS
+   ========================================================= */
+
+.profile-container .profile-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    margin-bottom: 25px;
+}
+
+.profile-container .profile-card h2 {
+    margin: 0 0 5px;
+
+    color: #1e293b;
+
+    font-size: 21px;
+}
+
+.profile-container .profile-card p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PROFILE FORM
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #334155;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.form-group textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+/* Two-column form */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* Help text */
+
+.input-help,
+.helper-text {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PROFILE SKILLS
+   ========================================================= */
+
+.skills-box {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.skill-option {
+    padding: 8px 13px;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease,
+                color 0.2s ease;
+}
+
+.skill-option:hover {
+    background: #e0ecff;
+
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   SAVE PROFILE BUTTON
+   ========================================================= */
+
+.save-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.save-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   PROFILE INFORMATION BOX
+   ========================================================= */
+
+.info-box {
+    padding: 18px;
+
+    background: #eff6ff;
+
+    border-radius: 10px;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TERMS / CHECKBOX
+   ========================================================= */
+
+.terms {
+    margin: 20px 0;
+}
+
+.terms label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .dashboard-container,
+    .teams-container,
+    .profile-container {
+        padding: 0 15px;
+    }
+
+    .welcome-section,
+    .dashboard-card,
+    .action-card,
+    .page-header,
+    .search-section,
+    .team-card,
+    .profile-card,
+    .profile-header {
+        padding: 22px;
+    }
+
+    .welcome-section h1,
+    .page-header h1 {
+        font-size: 25px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+}
